@@ -1,0 +1,16 @@
+lvm-vgmknodes:
+  image: ubuntu:bionic
+  command: vgmknodes
+  labels:
+    io.rancher.os.scope: "system"
+    io.rancher.os.detach: "false"
+    io.rancher.os.before: "docker"
+    io.rancher.os.after: "console"
+  privileged: true
+  volumes_from:
+  - all-volumes
+  pid: host
+  ipc: host
+  net: host
+  uts: host
+
