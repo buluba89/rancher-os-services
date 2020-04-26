@@ -1,6 +1,5 @@
 lvm-vgmknodes:
-  image: ubuntu:bionic
-  command: vgmknodes
+  image: buluba89/ros-lvm-vgmknodes
   labels:
     io.rancher.os.scope: "system"
     io.rancher.os.detach: "false"
@@ -8,7 +7,7 @@ lvm-vgmknodes:
     io.rancher.os.after: "console"
   privileged: true
   volumes_from:
-  - all-volumes
+  - system-volumes
   pid: host
   ipc: host
   net: host
