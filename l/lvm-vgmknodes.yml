@@ -5,10 +5,8 @@ lvm-vgmknodes:
     io.rancher.os.detach: "false"
     io.rancher.os.before: "udev"
   privileged: true
-  volumes_from:
-  - system-volumes
   volumes:
-  - /host/dev:/dev:shared
+  - /dev:/dev
   pid: host
   ipc: host
   net: host
