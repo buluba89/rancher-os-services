@@ -2,9 +2,11 @@ lvm-vgmknodes:
   image: buluba89/ros-lvm-vgmknodes
   labels:
     io.rancher.os.scope: "system"
-    io.rancher.os.detach: "true"
+    io.rancher.os.detach: "false"
     io.rancher.os.before: "udev"
   privileged: true
+  volumes_from:
+  - system-volumes
   volumes:
   - /host/dev:/dev:shared
   pid: host
