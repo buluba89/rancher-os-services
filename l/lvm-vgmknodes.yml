@@ -7,6 +7,8 @@ lvm-vgmknodes:
   privileged: true
   volumes_from:
   - system-volumes
+  volumes:
+  - /dev:/dev:shared
   pid: host
   ipc: host
   net: host
